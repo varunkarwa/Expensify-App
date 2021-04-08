@@ -35,11 +35,11 @@ test('should set text filter',() => {
         text
     };
     const state=filtersReducer(undefined,action);
-    expect(state.text).toBe('This is my filter');    
+    expect(state.text).toBe(text);    
 })
 
 test('should set startDate',() => {
-    const startDate = moment(0);
+    const startDate = moment();
     const action = {
         type:'SET_START_DATE',
         startDate
@@ -49,7 +49,7 @@ test('should set startDate',() => {
 })
 
 test('should set startDate',() => {
-    const endDate = moment(0);
+    const endDate = moment();
     const action = {
         type:'SET_END_DATE',
         endDate

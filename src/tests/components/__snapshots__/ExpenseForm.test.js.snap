@@ -12,14 +12,12 @@ exports[`should render ExpenseForm with expense data 1`] = `
       type="text"
       value="Rent"
     />
-    <br />
     <input
       onChange={[Function]}
       placeholder="Amount"
-      type="number"
-      value="1095"
+      type="text"
+      value="900"
     />
-    <br />
     <SingleDatePicker
       anchorDirection="left"
       customCloseIcon={null}
@@ -96,13 +94,11 @@ exports[`should render ExpenseForm with expense data 1`] = `
       withFullScreenPortal={false}
       withPortal={false}
     />
-    <br />
     <textarea
       onChange={[Function]}
-      placeholder="Add a note (optional)"
+      placeholder="Add a note(optional)"
       value=""
     />
-    <br />
     <button>
       Add Expense
     </button>
@@ -122,14 +118,12 @@ exports[`should render Expenseform 1`] = `
       type="text"
       value=""
     />
-    <br />
     <input
       onChange={[Function]}
       placeholder="Amount"
-      type="number"
+      type="text"
       value=""
     />
-    <br />
     <SingleDatePicker
       anchorDirection="left"
       customCloseIcon={null}
@@ -206,13 +200,11 @@ exports[`should render Expenseform 1`] = `
       withFullScreenPortal={false}
       withPortal={false}
     />
-    <br />
     <textarea
       onChange={[Function]}
-      placeholder="Add a note (optional)"
+      placeholder="Add a note(optional)"
       value=""
     />
-    <br />
     <button>
       Add Expense
     </button>
@@ -232,14 +224,12 @@ exports[`should render error for invalid submission 1`] = `
       type="text"
       value=""
     />
-    <br />
     <input
       onChange={[Function]}
       placeholder="Amount"
-      type="number"
+      type="text"
       value=""
     />
-    <br />
     <SingleDatePicker
       anchorDirection="left"
       customCloseIcon={null}
@@ -316,13 +306,11 @@ exports[`should render error for invalid submission 1`] = `
       withFullScreenPortal={false}
       withPortal={false}
     />
-    <br />
     <textarea
       onChange={[Function]}
-      placeholder="Add a note (optional)"
+      placeholder="Add a note(optional)"
       value=""
     />
-    <br />
     <button>
       Add Expense
     </button>
@@ -333,7 +321,7 @@ exports[`should render error for invalid submission 1`] = `
 exports[`should render error for invalid submission 2`] = `
 <div>
   <p>
-    Please provide description and amount
+    Please provide description and amount!
   </p>
   <form
     onSubmit={[Function]}
@@ -345,14 +333,12 @@ exports[`should render error for invalid submission 2`] = `
       type="text"
       value=""
     />
-    <br />
     <input
       onChange={[Function]}
       placeholder="Amount"
-      type="number"
+      type="text"
       value=""
     />
-    <br />
     <SingleDatePicker
       anchorDirection="left"
       customCloseIcon={null}
@@ -429,13 +415,11 @@ exports[`should render error for invalid submission 2`] = `
       withFullScreenPortal={false}
       withPortal={false}
     />
-    <br />
     <textarea
       onChange={[Function]}
-      placeholder="Add a note (optional)"
+      placeholder="Add a note(optional)"
       value=""
     />
-    <br />
     <button>
       Add Expense
     </button>

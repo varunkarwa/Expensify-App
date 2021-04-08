@@ -2,13 +2,12 @@
 
 exports[`should render Expense List Item  1`] = `
 <div>
-  Error:404! 
+  404! - 
   <Link
     replace={false}
     to="/"
   >
-    <br />
-    Home page
+    Go to Home page
   </Link>
 </div>
 `;
