@@ -3,28 +3,37 @@ import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import {startEditExpense, startRemoveExpense} from '../actions/expenses';
 
-const EditExpense = (props) => {
-    return (
-        <div>
-            <ExpenseForm 
-                expense={props.expense}
-                onSubmit={(expense) => {
-                    props.dispatch(startEditExpense(props.expense.id,expense));
-                    props.history.push('/');
-                }}
-            />
-            <button onClick={() => {
-                props.dispatch(startRemoveExpense({id: props.expense.id}));
-                props.history.push('/');
-            }}>Remove Expense</button>
-        </div>
-    );
+export class EditExpense extends React.Component{
+    onSubmit = (expense) => {
+        console.log(expense);
+        this.props.startEditExpense({id:this.props.expense.id, updates:expense});
+        this.props.history.push('/');
+    };
+    onRemove = () => {
+        this.props.startRemoveExpense({id: this.props.expense.id});
+        this.props.history.push('/');
+    };
+    render() {
+        return(
+            <div>
+            <h1>Edit Expense</h1>
+                <ExpenseForm 
+                    expense={this.props.expense}
+                    onSubmit={this.onSubmit}
+                />
+                <button onClick={this.onRemove}>Remove Expense</button>
+            </div>
+        )
+    }
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        expense: state.expenses.find((expense) => expense.id === props.match.params.id)
-    };
-};
+const mapStateToProps = (state, props) => ({
+    expense: state.expenses.find((expense) => expense.id === props.match.params.id)
+});
 
-export default connect(mapStateToProps)(EditExpense);
+const mapDispatchToProps = (dispatch,props) => ({
+    startEditExpense: ({id,updates}) => dispatch(startEditExpense({id, updates})),
+    startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(EditExpense);
